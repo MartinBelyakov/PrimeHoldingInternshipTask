@@ -4,23 +4,24 @@
     
     using Data.Models;
 
-    public class EmployeesandtasksDbContext : DbContext
+    public class InternshipTaskDbContext : DbContext
     {
         public DbSet<Employee> Employees { get; set; }
 
         public DbSet<Task> Tasks { get; set; }
 
-        public EmployeesandtasksDbContext()
+        public InternshipTaskDbContext()
         {
 
         }
 
-        public EmployeesandtasksDbContext(DbContextOptions<EmployeesandtasksDbContext> options)
+        public InternshipTaskDbContext(DbContextOptions<InternshipTaskDbContext> options)
             : base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-0UU6PKA\SQLEXPRESS;Database=EmployeesAndTasks;Trusted_Connection=True;Encrypt=False;");
+            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=EmployeesAndTasks;Trusted_Connection=True;Encrypt=False;")
+                .UseLazyLoadingProxies();
         }
     }
 }

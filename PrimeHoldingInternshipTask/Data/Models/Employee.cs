@@ -14,6 +14,6 @@
 
         public decimal MonthlySalary { get; set; }
 
-        public ICollection<Task> Tasks { get; set; } = new List<Task>();
+        public virtual ICollection<Task> Tasks { get; set; } = new List<Task>();
     }
 }

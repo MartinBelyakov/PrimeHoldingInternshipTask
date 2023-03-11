@@ -11,7 +11,7 @@ using PrimeHoldingInternshipTask.Data;
 
 namespace PrimeHoldingInternshipTask.Migrations
 {
-    [DbContext(typeof(EmployeesandtasksDbContext))]
+    [DbContext(typeof(InternshipTaskDbContext))]
     [Migration("20230309190548_init")]
     partial class init
     {
