@@ -13,21 +13,8 @@
         {
             this.data = new InternshipTaskDbContext();
         }
-        public TaskDisplayModel ReadTask(string title)
-        {
-            var searchedTask = data.Tasks.FirstOrDefault(x => x.Title == title);
 
-            var displayModelTask = new TaskDisplayModel
-                (
-                searchedTask.Title,
-                searchedTask.Description,
-                searchedTask.AsigneeId,
-                searchedTask.DueDate
-                );
-
-            return displayModelTask;
-        }
-        public void CreateTask(string title, string description, string asigneeFullName, string dueDate)
+        public string CreateTask(string title, string description, string asigneeFullName, string dueDate)
         {
             var task = new Task
             {
@@ -39,27 +26,61 @@
 
             this.data.Tasks.Add(task);
             this.data.SaveChanges();
+
+            return "Action was successful!";
         }
 
-        public void UpdateTask(string title, string newTitle, string description, string asigneeFullName, string dueDate)
+        public string UpdateTask(string title, string newTitle, string description, string asigneeFullName, string dueDate)
         {
+            var task = this.data.Tasks.FirstOrDefault(x => x.Title == title);
 
-            var taskToUpdate = this.data.Tasks.FirstOrDefault(x => x.Title == title);
+            if (task == null)
+            {
+                return "Employee doesn't exist!";
+            }
 
-            taskToUpdate.Title = newTitle;
-            taskToUpdate.Description = description;
-            taskToUpdate.Asignee = this.data.Employees.FirstOrDefault(x => x.FullName == asigneeFullName);
-            taskToUpdate.DueDate = DateTime.ParseExact(dueDate, "dd.MM.yyyy", CultureInfo.InvariantCulture);
+            task.Title = newTitle;
+            task.Description = description;
+            task.Asignee = this.data.Employees.FirstOrDefault(x => x.FullName == asigneeFullName);
+            task.DueDate = DateTime.ParseExact(dueDate, "dd.MM.yyyy", CultureInfo.InvariantCulture);
 
             this.data.SaveChanges();
+
+            return "Action was successful!";
         }
 
-        public void RemoveTask(string title)
+        public string RemoveTask(string title)
         {
-            var taskToDelete = this.data.Tasks.FirstOrDefault(x => x.Title == title);
+            var task = this.data.Tasks.FirstOrDefault(x => x.Title == title);
 
-            this.data.Tasks.Remove(taskToDelete);
+            if (task == null)
+            {
+                return "Employee doesn't exist!";
+            }
+
+            this.data.Tasks.Remove(task);
             this.data.SaveChanges();
+
+            return "Action was successful!";
+        }
+        public string ReadTask(string title)
+        {
+            var task = data.Tasks.FirstOrDefault(x => x.Title == title);
+
+            if (task == null)
+            {
+                return "Employee doesn't exist!";
+            }
+
+            var displayModelTask = new TaskDisplayModel
+                (
+                task.Title,
+                task.Description,
+                task.AsigneeId,
+                task.DueDate
+                );
+
+            return displayModelTask.ToString();
         }
     }
 }

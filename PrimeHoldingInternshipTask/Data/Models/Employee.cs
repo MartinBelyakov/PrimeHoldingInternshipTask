@@ -14,6 +14,10 @@
 
         public decimal MonthlySalary { get; set; }
 
+        public int DepartmentId { get; set; }
+
+        public virtual Department Department { get; set; }
+
         public virtual ICollection<Task> Tasks { get; set; } = new List<Task>();
     }
 }

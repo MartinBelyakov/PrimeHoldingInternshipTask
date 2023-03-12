@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PrimeHoldingInternshipTask.Data;
 
@@ -11,9 +12,11 @@ using PrimeHoldingInternshipTask.Data;
 namespace PrimeHoldingInternshipTask.Migrations
 {
     [DbContext(typeof(InternshipTaskDbContext))]
-    partial class EmployeesandtasksDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230312200442_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,6 +28,23 @@ namespace PrimeHoldingInternshipTask.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("PrimeHoldingInternshipTask.Data.Models.Department", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Departments");
+                });
+
             modelBuilder.Entity("PrimeHoldingInternshipTask.Data.Models.Employee", b =>
                 {
                     b.Property<int>("Id")
@@ -35,6 +55,9 @@ namespace PrimeHoldingInternshipTask.Migrations
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("DepartmentId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -52,6 +75,8 @@ namespace PrimeHoldingInternshipTask.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("DepartmentId");
 
                     b.ToTable("Employees");
                 });
@@ -85,6 +110,17 @@ namespace PrimeHoldingInternshipTask.Migrations
                     b.ToTable("Tasks");
                 });
 
+            modelBuilder.Entity("PrimeHoldingInternshipTask.Data.Models.Employee", b =>
+                {
+                    b.HasOne("PrimeHoldingInternshipTask.Data.Models.Department", "Department")
+                        .WithMany("Employees")
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Department");
+                });
+
             modelBuilder.Entity("PrimeHoldingInternshipTask.Data.Models.Task", b =>
                 {
                     b.HasOne("PrimeHoldingInternshipTask.Data.Models.Employee", "Asignee")
@@ -94,6 +130,11 @@ namespace PrimeHoldingInternshipTask.Migrations
                         .IsRequired();
 
                     b.Navigation("Asignee");
+                });
+
+            modelBuilder.Entity("PrimeHoldingInternshipTask.Data.Models.Department", b =>
+                {
+                    b.Navigation("Employees");
                 });
 
             modelBuilder.Entity("PrimeHoldingInternshipTask.Data.Models.Employee", b =>

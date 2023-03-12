@@ -2,11 +2,10 @@
 {
     using System.Globalization;
     using System.Text;
-    using Castle.Components.DictionaryAdapter.Xml;
+
     using Data;
     using Data.Models;
     using DisplayModels;
-    using Microsoft.EntityFrameworkCore;
 
     public class EmployeeService
     {
@@ -15,24 +14,39 @@
         {
             this.data = new InternshipTaskDbContext();
         }
-        public void CreateEmployee(string fullName, string email, string phoneNumber, string dateOfBirth, decimal monthlySalary)
+        public string CreateEmployee(string fullName, string email, string phoneNumber, string dateOfBirth, decimal monthlySalary, string departmentName)
         {
+            var department = this.data.Departments.FirstOrDefault(x => x.Name == departmentName);
+
+            if ( department == null)
+            {
+                return "Department doesn't exist!";
+            }
+
             var employee = new Employee
             {
                 FullName = fullName,
                 Email = email,
                 Number = phoneNumber,
                 DateOfBirth = DateTime.ParseExact(dateOfBirth, "dd.MM.yyyy", CultureInfo.InvariantCulture),
-                MonthlySalary = monthlySalary
+                MonthlySalary = monthlySalary,
+                DepartmentId = department.Id
             };
 
             this.data.Employees.Add(employee);
             this.data.SaveChanges();
+
+            return "Action was successful!";
         }
 
-        public void UpdateEmployee(string fullName, string newFullName, string email, string phoneNumber, string dateOfBirth, decimal monthlySalary)
+        public string UpdateEmployee(string fullName, string newFullName, string email, string phoneNumber, string dateOfBirth, decimal monthlySalary)
         {
             var employee = this.data.Employees.FirstOrDefault(x => x.FullName == fullName);
+
+            if (employee == null)
+            {
+                return "Employee doesn't exist!";
+            }
 
             employee.FullName = newFullName;
             employee.Email = email;
@@ -41,50 +55,66 @@
             employee.MonthlySalary = monthlySalary;
 
             this.data.SaveChanges();
+
+            return "Action was successful!";
         }
 
-        public void DeleteEmployee(string fullName)
+        public string DeleteEmployee(string fullName)
         {
             var employee = this.data.Employees.FirstOrDefault(x => x.FullName == fullName);
 
+            if (employee == null)
+            {
+                return "Employee doesn't exist!";
+            }
+
             this.data.Employees.Remove(employee);
             this.data.SaveChanges();
+
+            return "Action was successful!";
         }
 
-        public EmployeeDisplayModel ReadEmployee(string fullName)
+        public string ReadEmployee(string fullName)
         {
-            var searchedEmployee = this.data.Employees.FirstOrDefault(x => x.FullName == fullName);
+            var employee = this.data.Employees.FirstOrDefault(x => x.FullName == fullName);
+
+            if (employee == null)
+            {
+                return "Employee doesn't exist!";
+            }
 
             var employeeDisplayModel = new EmployeeDisplayModel
                 (
-                searchedEmployee.FullName,
-                searchedEmployee.Email,
-                searchedEmployee.Number,
-                searchedEmployee.DateOfBirth,
-                searchedEmployee.MonthlySalary,
-                searchedEmployee.Tasks.ToList()
+                employee.FullName,
+                employee.Email,
+                employee.Number,
+                employee.DateOfBirth,
+                employee.MonthlySalary,
+                employee.Department.Name,
+                employee.Tasks.ToList()
                 );
 
-            return employeeDisplayModel;
+            return employeeDisplayModel.ToString();
         }
 
         public string ReturnTopFiveEmployees()
         {
-
             var employees = this.data.Employees;
             var sb = new StringBuilder();
 
             var now = DateTime.Now;
             var lastMonth = now.AddMonths(-1);
-            var employeesWithCompletedTasksLastMonth = employees.Where(e => e.Tasks.Any(t => t.DueDate >= lastMonth && t.DueDate <= now)).ToList();
 
-            var top5EmployeesWithMostCompletedTasks = employeesWithCompletedTasksLastMonth.OrderByDescending(e => e.Tasks.Count(t => t.DueDate >= lastMonth && t.DueDate <= now)).Take(5).ToList();
+            var employeesWithCompletedTasksLastMonth = employees
+                .Where(e => e.Tasks.Any(t => t.DueDate >= lastMonth && t.DueDate <= now)).ToList();
+
+            var top5EmployeesWithMostCompletedTasks = employeesWithCompletedTasksLastMonth
+                .OrderByDescending(e => e.Tasks.Count(t => t.DueDate >= lastMonth && t.DueDate <= now)).Take(5).ToList();
 
             foreach (var emp in top5EmployeesWithMostCompletedTasks)
             {
                 sb.AppendLine($"{emp.FullName} - {emp.Tasks.Count}");
             }
-
 
             return sb.ToString().TrimEnd();
         }

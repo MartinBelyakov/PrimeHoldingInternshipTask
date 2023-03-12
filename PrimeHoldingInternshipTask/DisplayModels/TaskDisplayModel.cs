@@ -11,8 +11,6 @@
             this.DueDate = dueDate.ToString("dd.MM.yyyy");
         }
 
-        public int Id { get; set; }
-
         public string Title { get; set; }
 
         public string Description { get; set; }
