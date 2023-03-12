@@ -1,10 +1,12 @@
 ﻿namespace PrimeHoldingInternshipTask.Services
 {
     using System.Globalization;
-
+    using System.Text;
+    using Castle.Components.DictionaryAdapter.Xml;
     using Data;
     using Data.Models;
     using DisplayModels;
+    using Microsoft.EntityFrameworkCore;
 
     public class EmployeeService
     {
@@ -64,6 +66,27 @@
                 );
 
             return employeeDisplayModel;
+        }
+
+        public string ReturnTopFiveEmployees()
+        {
+
+            var employees = this.data.Employees;
+            var sb = new StringBuilder();
+
+            var now = DateTime.Now;
+            var lastMonth = now.AddMonths(-1);
+            var employeesWithCompletedTasksLastMonth = employees.Where(e => e.Tasks.Any(t => t.DueDate >= lastMonth && t.DueDate <= now)).ToList();
+
+            var top5EmployeesWithMostCompletedTasks = employeesWithCompletedTasksLastMonth.OrderByDescending(e => e.Tasks.Count(t => t.DueDate >= lastMonth && t.DueDate <= now)).Take(5).ToList();
+
+            foreach (var emp in top5EmployeesWithMostCompletedTasks)
+            {
+                sb.AppendLine($"{emp.FullName} - {emp.Tasks.Count}");
+            }
+
+
+            return sb.ToString().TrimEnd();
         }
     }
 }

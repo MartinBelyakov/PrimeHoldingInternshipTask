@@ -130,7 +130,8 @@
                 }
                 else if (action == "Display top 5 employees")
                 {
-                    // TO DO....
+                    var employees = employeeService.ReturnTopFiveEmployees();
+                    Console.WriteLine(employees);
                 }
                 else
                 {
