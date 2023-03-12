@@ -1,0 +1,1388 @@
+{
+    "departments": [
+        {
+            "employees": [
+                {
+                    "tasks": [
+                        {
+                            "id": 1,
+                            "title": "Sell me this pen",
+                            "description": "selling the pen",
+                            "asigneeId": 1,
+                            "dueDate": "2023-03-12T00:00:00"
+                        }
+                    ],
+                    "id": 1,
+                    "fullName": "Marto Belyakov",
+                    "email": "martin.belyakov@abv.bg",
+                    "number": "09799",
+                    "dateOfBirth": "1999-08-26T00:00:00",
+                    "monthlySalary": 1200.00,
+                    "departmentId": 1
+                },
+                {
+                    "tasks": [
+                        {
+                            "id": 2,
+                            "title": "doThis",
+                            "description": "aaa",
+                            "asigneeId": 2,
+                            "dueDate": "2023-02-16T00:00:00"
+                        },
+                        {
+                            "id": 3,
+                            "title": "doThat",
+                            "description": "aass",
+                            "asigneeId": 2,
+                            "dueDate": "2023-02-17T00:00:00"
+                        },
+                        {
+                            "id": 4,
+                            "title": "doSmth",
+                            "description": "hhgg",
+                            "asigneeId": 2,
+                            "dueDate": "2023-02-20T00:00:00"
+                        },
+                        {
+                            "id": 5,
+                            "title": "jump",
+                            "description": "nnaa",
+                            "asigneeId": 2,
+                            "dueDate": "2023-02-22T00:00:00"
+                        },
+                        {
+                            "id": 6,
+                            "title": "fall",
+                            "description": "asdas",
+                            "asigneeId": 2,
+                            "dueDate": "2023-02-25T00:00:00"
+                        }
+                    ],
+                    "id": 2,
+                    "fullName": "John Smith",
+                    "email": "john.smith@example.com",
+                    "number": "(555) 555-1234",
+                    "dateOfBirth": "1990-01-01T00:00:00",
+                    "monthlySalary": 3000.00,
+                    "departmentId": 1
+                },
+                {
+                    "tasks": [
+                        {
+                            "id": 11,
+                            "title": "watch",
+                            "description": "asdasd",
+                            "asigneeId": 5,
+                            "dueDate": "2023-02-19T00:00:00"
+                        }
+                    ],
+                    "id": 5,
+                    "fullName": "Samantha Lee",
+                    "email": "samantha.lee@example.com",
+                    "number": "(555) 555-8765",
+                    "dateOfBirth": "1992-10-10T00:00:00",
+                    "monthlySalary": 5500.00,
+                    "departmentId": 1
+                }
+            ],
+            "id": 1,
+            "name": "Sales"
+        },
+        {
+            "employees": [
+                {
+                    "tasks": [
+                        {
+                            "id": 7,
+                            "title": "run",
+                            "description": "adsda",
+                            "asigneeId": 3,
+                            "dueDate": "2023-02-21T00:00:00"
+                        },
+                        {
+                            "id": 8,
+                            "title": "shoot",
+                            "description": "sada",
+                            "asigneeId": 3,
+                            "dueDate": "2023-02-19T00:00:00"
+                        }
+                    ],
+                    "id": 3,
+                    "fullName": "Jane Doe",
+                    "email": "jane.doe@example.com",
+                    "number": "(555) 555-5678",
+                    "dateOfBirth": "1995-06-30T00:00:00",
+                    "monthlySalary": 6000.00,
+                    "departmentId": 2
+                }
+            ],
+            "id": 2,
+            "name": "Human Resources"
+        },
+        {
+            "employees": [
+                {
+                    "tasks": [
+                        {
+                            "id": 9,
+                            "title": "look",
+                            "description": "sdfs",
+                            "asigneeId": 4,
+                            "dueDate": "2023-02-15T00:00:00"
+                        },
+                        {
+                            "id": 10,
+                            "title": "play",
+                            "description": "playasda",
+                            "asigneeId": 4,
+                            "dueDate": "2023-02-18T00:00:00"
+                        }
+                    ],
+                    "id": 4,
+                    "fullName": "Bob Johnson",
+                    "email": "bob.johnson@example.com",
+                    "number": "(555) 555-4321",
+                    "dateOfBirth": "1985-06-30T00:00:00",
+                    "monthlySalary": 7000.00,
+                    "departmentId": 3
+                },
+                {
+                    "tasks": [
+                        {
+                            "id": 12,
+                            "title": "sleep",
+                            "description": "asdas",
+                            "asigneeId": 6,
+                            "dueDate": "2023-02-19T00:00:00"
+                        }
+                    ],
+                    "id": 6,
+                    "fullName": "David Kim",
+                    "email": "david.kim@example.com",
+                    "number": "(555) 555-2468",
+                    "dateOfBirth": "1998-12-25T00:00:00",
+                    "monthlySalary": 4555.00,
+                    "departmentId": 3
+                }
+            ],
+            "id": 3,
+            "name": "Engineering"
+        }
+    ],
+    "employees": [
+        {
+            "department": {
+                "employees": [
+                    {
+                        "tasks": [
+                            {
+                                "id": 2,
+                                "title": "doThis",
+                                "description": "aaa",
+                                "asigneeId": 2,
+                                "dueDate": "2023-02-16T00:00:00"
+                            },
+                            {
+                                "id": 3,
+                                "title": "doThat",
+                                "description": "aass",
+                                "asigneeId": 2,
+                                "dueDate": "2023-02-17T00:00:00"
+                            },
+                            {
+                                "id": 4,
+                                "title": "doSmth",
+                                "description": "hhgg",
+                                "asigneeId": 2,
+                                "dueDate": "2023-02-20T00:00:00"
+                            },
+                            {
+                                "id": 5,
+                                "title": "jump",
+                                "description": "nnaa",
+                                "asigneeId": 2,
+                                "dueDate": "2023-02-22T00:00:00"
+                            },
+                            {
+                                "id": 6,
+                                "title": "fall",
+                                "description": "asdas",
+                                "asigneeId": 2,
+                                "dueDate": "2023-02-25T00:00:00"
+                            }
+                        ],
+                        "id": 2,
+                        "fullName": "John Smith",
+                        "email": "john.smith@example.com",
+                        "number": "(555) 555-1234",
+                        "dateOfBirth": "1990-01-01T00:00:00",
+                        "monthlySalary": 3000.00,
+                        "departmentId": 1
+                    },
+                    {
+                        "tasks": [
+                            {
+                                "id": 11,
+                                "title": "watch",
+                                "description": "asdasd",
+                                "asigneeId": 5,
+                                "dueDate": "2023-02-19T00:00:00"
+                            }
+                        ],
+                        "id": 5,
+                        "fullName": "Samantha Lee",
+                        "email": "samantha.lee@example.com",
+                        "number": "(555) 555-8765",
+                        "dateOfBirth": "1992-10-10T00:00:00",
+                        "monthlySalary": 5500.00,
+                        "departmentId": 1
+                    }
+                ],
+                "id": 1,
+                "name": "Sales"
+            },
+            "tasks": [
+                {
+                    "id": 1,
+                    "title": "Sell me this pen",
+                    "description": "selling the pen",
+                    "asigneeId": 1,
+                    "dueDate": "2023-03-12T00:00:00"
+                }
+            ],
+            "id": 1,
+            "fullName": "Marto Belyakov",
+            "email": "martin.belyakov@abv.bg",
+            "number": "09799",
+            "dateOfBirth": "1999-08-26T00:00:00",
+            "monthlySalary": 1200.00,
+            "departmentId": 1
+        },
+        {
+            "department": {
+                "employees": [
+                    {
+                        "tasks": [
+                            {
+                                "id": 1,
+                                "title": "Sell me this pen",
+                                "description": "selling the pen",
+                                "asigneeId": 1,
+                                "dueDate": "2023-03-12T00:00:00"
+                            }
+                        ],
+                        "id": 1,
+                        "fullName": "Marto Belyakov",
+                        "email": "martin.belyakov@abv.bg",
+                        "number": "09799",
+                        "dateOfBirth": "1999-08-26T00:00:00",
+                        "monthlySalary": 1200.00,
+                        "departmentId": 1
+                    },
+                    {
+                        "tasks": [
+                            {
+                                "id": 11,
+                                "title": "watch",
+                                "description": "asdasd",
+                                "asigneeId": 5,
+                                "dueDate": "2023-02-19T00:00:00"
+                            }
+                        ],
+                        "id": 5,
+                        "fullName": "Samantha Lee",
+                        "email": "samantha.lee@example.com",
+                        "number": "(555) 555-8765",
+                        "dateOfBirth": "1992-10-10T00:00:00",
+                        "monthlySalary": 5500.00,
+                        "departmentId": 1
+                    }
+                ],
+                "id": 1,
+                "name": "Sales"
+            },
+            "tasks": [
+                {
+                    "id": 2,
+                    "title": "doThis",
+                    "description": "aaa",
+                    "asigneeId": 2,
+                    "dueDate": "2023-02-16T00:00:00"
+                },
+                {
+                    "id": 3,
+                    "title": "doThat",
+                    "description": "aass",
+                    "asigneeId": 2,
+                    "dueDate": "2023-02-17T00:00:00"
+                },
+                {
+                    "id": 4,
+                    "title": "doSmth",
+                    "description": "hhgg",
+                    "asigneeId": 2,
+                    "dueDate": "2023-02-20T00:00:00"
+                },
+                {
+                    "id": 5,
+                    "title": "jump",
+                    "description": "nnaa",
+                    "asigneeId": 2,
+                    "dueDate": "2023-02-22T00:00:00"
+                },
+                {
+                    "id": 6,
+                    "title": "fall",
+                    "description": "asdas",
+                    "asigneeId": 2,
+                    "dueDate": "2023-02-25T00:00:00"
+                }
+            ],
+            "id": 2,
+            "fullName": "John Smith",
+            "email": "john.smith@example.com",
+            "number": "(555) 555-1234",
+            "dateOfBirth": "1990-01-01T00:00:00",
+            "monthlySalary": 3000.00,
+            "departmentId": 1
+        },
+        {
+            "department": {
+                "employees": [],
+                "id": 2,
+                "name": "Human Resources"
+            },
+            "tasks": [
+                {
+                    "id": 7,
+                    "title": "run",
+                    "description": "adsda",
+                    "asigneeId": 3,
+                    "dueDate": "2023-02-21T00:00:00"
+                },
+                {
+                    "id": 8,
+                    "title": "shoot",
+                    "description": "sada",
+                    "asigneeId": 3,
+                    "dueDate": "2023-02-19T00:00:00"
+                }
+            ],
+            "id": 3,
+            "fullName": "Jane Doe",
+            "email": "jane.doe@example.com",
+            "number": "(555) 555-5678",
+            "dateOfBirth": "1995-06-30T00:00:00",
+            "monthlySalary": 6000.00,
+            "departmentId": 2
+        },
+        {
+            "department": {
+                "employees": [
+                    {
+                        "tasks": [
+                            {
+                                "id": 12,
+                                "title": "sleep",
+                                "description": "asdas",
+                                "asigneeId": 6,
+                                "dueDate": "2023-02-19T00:00:00"
+                            }
+                        ],
+                        "id": 6,
+                        "fullName": "David Kim",
+                        "email": "david.kim@example.com",
+                        "number": "(555) 555-2468",
+                        "dateOfBirth": "1998-12-25T00:00:00",
+                        "monthlySalary": 4555.00,
+                        "departmentId": 3
+                    }
+                ],
+                "id": 3,
+                "name": "Engineering"
+            },
+            "tasks": [
+                {
+                    "id": 9,
+                    "title": "look",
+                    "description": "sdfs",
+                    "asigneeId": 4,
+                    "dueDate": "2023-02-15T00:00:00"
+                },
+                {
+                    "id": 10,
+                    "title": "play",
+                    "description": "playasda",
+                    "asigneeId": 4,
+                    "dueDate": "2023-02-18T00:00:00"
+                }
+            ],
+            "id": 4,
+            "fullName": "Bob Johnson",
+            "email": "bob.johnson@example.com",
+            "number": "(555) 555-4321",
+            "dateOfBirth": "1985-06-30T00:00:00",
+            "monthlySalary": 7000.00,
+            "departmentId": 3
+        },
+        {
+            "department": {
+                "employees": [
+                    {
+                        "tasks": [
+                            {
+                                "id": 1,
+                                "title": "Sell me this pen",
+                                "description": "selling the pen",
+                                "asigneeId": 1,
+                                "dueDate": "2023-03-12T00:00:00"
+                            }
+                        ],
+                        "id": 1,
+                        "fullName": "Marto Belyakov",
+                        "email": "martin.belyakov@abv.bg",
+                        "number": "09799",
+                        "dateOfBirth": "1999-08-26T00:00:00",
+                        "monthlySalary": 1200.00,
+                        "departmentId": 1
+                    },
+                    {
+                        "tasks": [
+                            {
+                                "id": 2,
+                                "title": "doThis",
+                                "description": "aaa",
+                                "asigneeId": 2,
+                                "dueDate": "2023-02-16T00:00:00"
+                            },
+                            {
+                                "id": 3,
+                                "title": "doThat",
+                                "description": "aass",
+                                "asigneeId": 2,
+                                "dueDate": "2023-02-17T00:00:00"
+                            },
+                            {
+                                "id": 4,
+                                "title": "doSmth",
+                                "description": "hhgg",
+                                "asigneeId": 2,
+                                "dueDate": "2023-02-20T00:00:00"
+                            },
+                            {
+                                "id": 5,
+                                "title": "jump",
+                                "description": "nnaa",
+                                "asigneeId": 2,
+                                "dueDate": "2023-02-22T00:00:00"
+                            },
+                            {
+                                "id": 6,
+                                "title": "fall",
+                                "description": "asdas",
+                                "asigneeId": 2,
+                                "dueDate": "2023-02-25T00:00:00"
+                            }
+                        ],
+                        "id": 2,
+                        "fullName": "John Smith",
+                        "email": "john.smith@example.com",
+                        "number": "(555) 555-1234",
+                        "dateOfBirth": "1990-01-01T00:00:00",
+                        "monthlySalary": 3000.00,
+                        "departmentId": 1
+                    }
+                ],
+                "id": 1,
+                "name": "Sales"
+            },
+            "tasks": [
+                {
+                    "id": 11,
+                    "title": "watch",
+                    "description": "asdasd",
+                    "asigneeId": 5,
+                    "dueDate": "2023-02-19T00:00:00"
+                }
+            ],
+            "id": 5,
+            "fullName": "Samantha Lee",
+            "email": "samantha.lee@example.com",
+            "number": "(555) 555-8765",
+            "dateOfBirth": "1992-10-10T00:00:00",
+            "monthlySalary": 5500.00,
+            "departmentId": 1
+        },
+        {
+            "department": {
+                "employees": [
+                    {
+                        "tasks": [
+                            {
+                                "id": 9,
+                                "title": "look",
+                                "description": "sdfs",
+                                "asigneeId": 4,
+                                "dueDate": "2023-02-15T00:00:00"
+                            },
+                            {
+                                "id": 10,
+                                "title": "play",
+                                "description": "playasda",
+                                "asigneeId": 4,
+                                "dueDate": "2023-02-18T00:00:00"
+                            }
+                        ],
+                        "id": 4,
+                        "fullName": "Bob Johnson",
+                        "email": "bob.johnson@example.com",
+                        "number": "(555) 555-4321",
+                        "dateOfBirth": "1985-06-30T00:00:00",
+                        "monthlySalary": 7000.00,
+                        "departmentId": 3
+                    }
+                ],
+                "id": 3,
+                "name": "Engineering"
+            },
+            "tasks": [
+                {
+                    "id": 12,
+                    "title": "sleep",
+                    "description": "asdas",
+                    "asigneeId": 6,
+                    "dueDate": "2023-02-19T00:00:00"
+                }
+            ],
+            "id": 6,
+            "fullName": "David Kim",
+            "email": "david.kim@example.com",
+            "number": "(555) 555-2468",
+            "dateOfBirth": "1998-12-25T00:00:00",
+            "monthlySalary": 4555.00,
+            "departmentId": 3
+        }
+    ],
+    "tasks": [
+        {
+            "asignee": {
+                "department": {
+                    "employees": [
+                        {
+                            "tasks": [
+                                {
+                                    "id": 2,
+                                    "title": "doThis",
+                                    "description": "aaa",
+                                    "asigneeId": 2,
+                                    "dueDate": "2023-02-16T00:00:00"
+                                },
+                                {
+                                    "id": 3,
+                                    "title": "doThat",
+                                    "description": "aass",
+                                    "asigneeId": 2,
+                                    "dueDate": "2023-02-17T00:00:00"
+                                },
+                                {
+                                    "id": 4,
+                                    "title": "doSmth",
+                                    "description": "hhgg",
+                                    "asigneeId": 2,
+                                    "dueDate": "2023-02-20T00:00:00"
+                                },
+                                {
+                                    "id": 5,
+                                    "title": "jump",
+                                    "description": "nnaa",
+                                    "asigneeId": 2,
+                                    "dueDate": "2023-02-22T00:00:00"
+                                },
+                                {
+                                    "id": 6,
+                                    "title": "fall",
+                                    "description": "asdas",
+                                    "asigneeId": 2,
+                                    "dueDate": "2023-02-25T00:00:00"
+                                }
+                            ],
+                            "id": 2,
+                            "fullName": "John Smith",
+                            "email": "john.smith@example.com",
+                            "number": "(555) 555-1234",
+                            "dateOfBirth": "1990-01-01T00:00:00",
+                            "monthlySalary": 3000.00,
+                            "departmentId": 1
+                        },
+                        {
+                            "tasks": [
+                                {
+                                    "id": 11,
+                                    "title": "watch",
+                                    "description": "asdasd",
+                                    "asigneeId": 5,
+                                    "dueDate": "2023-02-19T00:00:00"
+                                }
+                            ],
+                            "id": 5,
+                            "fullName": "Samantha Lee",
+                            "email": "samantha.lee@example.com",
+                            "number": "(555) 555-8765",
+                            "dateOfBirth": "1992-10-10T00:00:00",
+                            "monthlySalary": 5500.00,
+                            "departmentId": 1
+                        }
+                    ],
+                    "id": 1,
+                    "name": "Sales"
+                },
+                "tasks": [],
+                "id": 1,
+                "fullName": "Marto Belyakov",
+                "email": "martin.belyakov@abv.bg",
+                "number": "09799",
+                "dateOfBirth": "1999-08-26T00:00:00",
+                "monthlySalary": 1200.00,
+                "departmentId": 1
+            },
+            "id": 1,
+            "title": "Sell me this pen",
+            "description": "selling the pen",
+            "asigneeId": 1,
+            "dueDate": "2023-03-12T00:00:00"
+        },
+        {
+            "asignee": {
+                "department": {
+                    "employees": [
+                        {
+                            "tasks": [
+                                {
+                                    "id": 1,
+                                    "title": "Sell me this pen",
+                                    "description": "selling the pen",
+                                    "asigneeId": 1,
+                                    "dueDate": "2023-03-12T00:00:00"
+                                }
+                            ],
+                            "id": 1,
+                            "fullName": "Marto Belyakov",
+                            "email": "martin.belyakov@abv.bg",
+                            "number": "09799",
+                            "dateOfBirth": "1999-08-26T00:00:00",
+                            "monthlySalary": 1200.00,
+                            "departmentId": 1
+                        },
+                        {
+                            "tasks": [
+                                {
+                                    "id": 11,
+                                    "title": "watch",
+                                    "description": "asdasd",
+                                    "asigneeId": 5,
+                                    "dueDate": "2023-02-19T00:00:00"
+                                }
+                            ],
+                            "id": 5,
+                            "fullName": "Samantha Lee",
+                            "email": "samantha.lee@example.com",
+                            "number": "(555) 555-8765",
+                            "dateOfBirth": "1992-10-10T00:00:00",
+                            "monthlySalary": 5500.00,
+                            "departmentId": 1
+                        }
+                    ],
+                    "id": 1,
+                    "name": "Sales"
+                },
+                "tasks": [
+                    {
+                        "id": 3,
+                        "title": "doThat",
+                        "description": "aass",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-17T00:00:00"
+                    },
+                    {
+                        "id": 4,
+                        "title": "doSmth",
+                        "description": "hhgg",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-20T00:00:00"
+                    },
+                    {
+                        "id": 5,
+                        "title": "jump",
+                        "description": "nnaa",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-22T00:00:00"
+                    },
+                    {
+                        "id": 6,
+                        "title": "fall",
+                        "description": "asdas",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-25T00:00:00"
+                    }
+                ],
+                "id": 2,
+                "fullName": "John Smith",
+                "email": "john.smith@example.com",
+                "number": "(555) 555-1234",
+                "dateOfBirth": "1990-01-01T00:00:00",
+                "monthlySalary": 3000.00,
+                "departmentId": 1
+            },
+            "id": 2,
+            "title": "doThis",
+            "description": "aaa",
+            "asigneeId": 2,
+            "dueDate": "2023-02-16T00:00:00"
+        },
+        {
+            "asignee": {
+                "department": {
+                    "employees": [
+                        {
+                            "tasks": [
+                                {
+                                    "id": 1,
+                                    "title": "Sell me this pen",
+                                    "description": "selling the pen",
+                                    "asigneeId": 1,
+                                    "dueDate": "2023-03-12T00:00:00"
+                                }
+                            ],
+                            "id": 1,
+                            "fullName": "Marto Belyakov",
+                            "email": "martin.belyakov@abv.bg",
+                            "number": "09799",
+                            "dateOfBirth": "1999-08-26T00:00:00",
+                            "monthlySalary": 1200.00,
+                            "departmentId": 1
+                        },
+                        {
+                            "tasks": [
+                                {
+                                    "id": 11,
+                                    "title": "watch",
+                                    "description": "asdasd",
+                                    "asigneeId": 5,
+                                    "dueDate": "2023-02-19T00:00:00"
+                                }
+                            ],
+                            "id": 5,
+                            "fullName": "Samantha Lee",
+                            "email": "samantha.lee@example.com",
+                            "number": "(555) 555-8765",
+                            "dateOfBirth": "1992-10-10T00:00:00",
+                            "monthlySalary": 5500.00,
+                            "departmentId": 1
+                        }
+                    ],
+                    "id": 1,
+                    "name": "Sales"
+                },
+                "tasks": [
+                    {
+                        "id": 2,
+                        "title": "doThis",
+                        "description": "aaa",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-16T00:00:00"
+                    },
+                    {
+                        "id": 4,
+                        "title": "doSmth",
+                        "description": "hhgg",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-20T00:00:00"
+                    },
+                    {
+                        "id": 5,
+                        "title": "jump",
+                        "description": "nnaa",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-22T00:00:00"
+                    },
+                    {
+                        "id": 6,
+                        "title": "fall",
+                        "description": "asdas",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-25T00:00:00"
+                    }
+                ],
+                "id": 2,
+                "fullName": "John Smith",
+                "email": "john.smith@example.com",
+                "number": "(555) 555-1234",
+                "dateOfBirth": "1990-01-01T00:00:00",
+                "monthlySalary": 3000.00,
+                "departmentId": 1
+            },
+            "id": 3,
+            "title": "doThat",
+            "description": "aass",
+            "asigneeId": 2,
+            "dueDate": "2023-02-17T00:00:00"
+        },
+        {
+            "asignee": {
+                "department": {
+                    "employees": [
+                        {
+                            "tasks": [
+                                {
+                                    "id": 1,
+                                    "title": "Sell me this pen",
+                                    "description": "selling the pen",
+                                    "asigneeId": 1,
+                                    "dueDate": "2023-03-12T00:00:00"
+                                }
+                            ],
+                            "id": 1,
+                            "fullName": "Marto Belyakov",
+                            "email": "martin.belyakov@abv.bg",
+                            "number": "09799",
+                            "dateOfBirth": "1999-08-26T00:00:00",
+                            "monthlySalary": 1200.00,
+                            "departmentId": 1
+                        },
+                        {
+                            "tasks": [
+                                {
+                                    "id": 11,
+                                    "title": "watch",
+                                    "description": "asdasd",
+                                    "asigneeId": 5,
+                                    "dueDate": "2023-02-19T00:00:00"
+                                }
+                            ],
+                            "id": 5,
+                            "fullName": "Samantha Lee",
+                            "email": "samantha.lee@example.com",
+                            "number": "(555) 555-8765",
+                            "dateOfBirth": "1992-10-10T00:00:00",
+                            "monthlySalary": 5500.00,
+                            "departmentId": 1
+                        }
+                    ],
+                    "id": 1,
+                    "name": "Sales"
+                },
+                "tasks": [
+                    {
+                        "id": 2,
+                        "title": "doThis",
+                        "description": "aaa",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-16T00:00:00"
+                    },
+                    {
+                        "id": 3,
+                        "title": "doThat",
+                        "description": "aass",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-17T00:00:00"
+                    },
+                    {
+                        "id": 5,
+                        "title": "jump",
+                        "description": "nnaa",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-22T00:00:00"
+                    },
+                    {
+                        "id": 6,
+                        "title": "fall",
+                        "description": "asdas",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-25T00:00:00"
+                    }
+                ],
+                "id": 2,
+                "fullName": "John Smith",
+                "email": "john.smith@example.com",
+                "number": "(555) 555-1234",
+                "dateOfBirth": "1990-01-01T00:00:00",
+                "monthlySalary": 3000.00,
+                "departmentId": 1
+            },
+            "id": 4,
+            "title": "doSmth",
+            "description": "hhgg",
+            "asigneeId": 2,
+            "dueDate": "2023-02-20T00:00:00"
+        },
+        {
+            "asignee": {
+                "department": {
+                    "employees": [
+                        {
+                            "tasks": [
+                                {
+                                    "id": 1,
+                                    "title": "Sell me this pen",
+                                    "description": "selling the pen",
+                                    "asigneeId": 1,
+                                    "dueDate": "2023-03-12T00:00:00"
+                                }
+                            ],
+                            "id": 1,
+                            "fullName": "Marto Belyakov",
+                            "email": "martin.belyakov@abv.bg",
+                            "number": "09799",
+                            "dateOfBirth": "1999-08-26T00:00:00",
+                            "monthlySalary": 1200.00,
+                            "departmentId": 1
+                        },
+                        {
+                            "tasks": [
+                                {
+                                    "id": 11,
+                                    "title": "watch",
+                                    "description": "asdasd",
+                                    "asigneeId": 5,
+                                    "dueDate": "2023-02-19T00:00:00"
+                                }
+                            ],
+                            "id": 5,
+                            "fullName": "Samantha Lee",
+                            "email": "samantha.lee@example.com",
+                            "number": "(555) 555-8765",
+                            "dateOfBirth": "1992-10-10T00:00:00",
+                            "monthlySalary": 5500.00,
+                            "departmentId": 1
+                        }
+                    ],
+                    "id": 1,
+                    "name": "Sales"
+                },
+                "tasks": [
+                    {
+                        "id": 2,
+                        "title": "doThis",
+                        "description": "aaa",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-16T00:00:00"
+                    },
+                    {
+                        "id": 3,
+                        "title": "doThat",
+                        "description": "aass",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-17T00:00:00"
+                    },
+                    {
+                        "id": 4,
+                        "title": "doSmth",
+                        "description": "hhgg",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-20T00:00:00"
+                    },
+                    {
+                        "id": 6,
+                        "title": "fall",
+                        "description": "asdas",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-25T00:00:00"
+                    }
+                ],
+                "id": 2,
+                "fullName": "John Smith",
+                "email": "john.smith@example.com",
+                "number": "(555) 555-1234",
+                "dateOfBirth": "1990-01-01T00:00:00",
+                "monthlySalary": 3000.00,
+                "departmentId": 1
+            },
+            "id": 5,
+            "title": "jump",
+            "description": "nnaa",
+            "asigneeId": 2,
+            "dueDate": "2023-02-22T00:00:00"
+        },
+        {
+            "asignee": {
+                "department": {
+                    "employees": [
+                        {
+                            "tasks": [
+                                {
+                                    "id": 1,
+                                    "title": "Sell me this pen",
+                                    "description": "selling the pen",
+                                    "asigneeId": 1,
+                                    "dueDate": "2023-03-12T00:00:00"
+                                }
+                            ],
+                            "id": 1,
+                            "fullName": "Marto Belyakov",
+                            "email": "martin.belyakov@abv.bg",
+                            "number": "09799",
+                            "dateOfBirth": "1999-08-26T00:00:00",
+                            "monthlySalary": 1200.00,
+                            "departmentId": 1
+                        },
+                        {
+                            "tasks": [
+                                {
+                                    "id": 11,
+                                    "title": "watch",
+                                    "description": "asdasd",
+                                    "asigneeId": 5,
+                                    "dueDate": "2023-02-19T00:00:00"
+                                }
+                            ],
+                            "id": 5,
+                            "fullName": "Samantha Lee",
+                            "email": "samantha.lee@example.com",
+                            "number": "(555) 555-8765",
+                            "dateOfBirth": "1992-10-10T00:00:00",
+                            "monthlySalary": 5500.00,
+                            "departmentId": 1
+                        }
+                    ],
+                    "id": 1,
+                    "name": "Sales"
+                },
+                "tasks": [
+                    {
+                        "id": 2,
+                        "title": "doThis",
+                        "description": "aaa",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-16T00:00:00"
+                    },
+                    {
+                        "id": 3,
+                        "title": "doThat",
+                        "description": "aass",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-17T00:00:00"
+                    },
+                    {
+                        "id": 4,
+                        "title": "doSmth",
+                        "description": "hhgg",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-20T00:00:00"
+                    },
+                    {
+                        "id": 5,
+                        "title": "jump",
+                        "description": "nnaa",
+                        "asigneeId": 2,
+                        "dueDate": "2023-02-22T00:00:00"
+                    }
+                ],
+                "id": 2,
+                "fullName": "John Smith",
+                "email": "john.smith@example.com",
+                "number": "(555) 555-1234",
+                "dateOfBirth": "1990-01-01T00:00:00",
+                "monthlySalary": 3000.00,
+                "departmentId": 1
+            },
+            "id": 6,
+            "title": "fall",
+            "description": "asdas",
+            "asigneeId": 2,
+            "dueDate": "2023-02-25T00:00:00"
+        },
+        {
+            "asignee": {
+                "department": {
+                    "employees": [],
+                    "id": 2,
+                    "name": "Human Resources"
+                },
+                "tasks": [
+                    {
+                        "id": 8,
+                        "title": "shoot",
+                        "description": "sada",
+                        "asigneeId": 3,
+                        "dueDate": "2023-02-19T00:00:00"
+                    }
+                ],
+                "id": 3,
+                "fullName": "Jane Doe",
+                "email": "jane.doe@example.com",
+                "number": "(555) 555-5678",
+                "dateOfBirth": "1995-06-30T00:00:00",
+                "monthlySalary": 6000.00,
+                "departmentId": 2
+            },
+            "id": 7,
+            "title": "run",
+            "description": "adsda",
+            "asigneeId": 3,
+            "dueDate": "2023-02-21T00:00:00"
+        },
+        {
+            "asignee": {
+                "department": {
+                    "employees": [],
+                    "id": 2,
+                    "name": "Human Resources"
+                },
+                "tasks": [
+                    {
+                        "id": 7,
+                        "title": "run",
+                        "description": "adsda",
+                        "asigneeId": 3,
+                        "dueDate": "2023-02-21T00:00:00"
+                    }
+                ],
+                "id": 3,
+                "fullName": "Jane Doe",
+                "email": "jane.doe@example.com",
+                "number": "(555) 555-5678",
+                "dateOfBirth": "1995-06-30T00:00:00",
+                "monthlySalary": 6000.00,
+                "departmentId": 2
+            },
+            "id": 8,
+            "title": "shoot",
+            "description": "sada",
+            "asigneeId": 3,
+            "dueDate": "2023-02-19T00:00:00"
+        },
+        {
+            "asignee": {
+                "department": {
+                    "employees": [
+                        {
+                            "tasks": [
+                                {
+                                    "id": 12,
+                                    "title": "sleep",
+                                    "description": "asdas",
+                                    "asigneeId": 6,
+                                    "dueDate": "2023-02-19T00:00:00"
+                                }
+                            ],
+                            "id": 6,
+                            "fullName": "David Kim",
+                            "email": "david.kim@example.com",
+                            "number": "(555) 555-2468",
+                            "dateOfBirth": "1998-12-25T00:00:00",
+                            "monthlySalary": 4555.00,
+                            "departmentId": 3
+                        }
+                    ],
+                    "id": 3,
+                    "name": "Engineering"
+                },
+                "tasks": [
+                    {
+                        "id": 10,
+                        "title": "play",
+                        "description": "playasda",
+                        "asigneeId": 4,
+                        "dueDate": "2023-02-18T00:00:00"
+                    }
+                ],
+                "id": 4,
+                "fullName": "Bob Johnson",
+                "email": "bob.johnson@example.com",
+                "number": "(555) 555-4321",
+                "dateOfBirth": "1985-06-30T00:00:00",
+                "monthlySalary": 7000.00,
+                "departmentId": 3
+            },
+            "id": 9,
+            "title": "look",
+            "description": "sdfs",
+            "asigneeId": 4,
+            "dueDate": "2023-02-15T00:00:00"
+        },
+        {
+            "asignee": {
+                "department": {
+                    "employees": [
+                        {
+                            "tasks": [
+                                {
+                                    "id": 12,
+                                    "title": "sleep",
+                                    "description": "asdas",
+                                    "asigneeId": 6,
+                                    "dueDate": "2023-02-19T00:00:00"
+                                }
+                            ],
+                            "id": 6,
+                            "fullName": "David Kim",
+                            "email": "david.kim@example.com",
+                            "number": "(555) 555-2468",
+                            "dateOfBirth": "1998-12-25T00:00:00",
+                            "monthlySalary": 4555.00,
+                            "departmentId": 3
+                        }
+                    ],
+                    "id": 3,
+                    "name": "Engineering"
+                },
+                "tasks": [
+                    {
+                        "id": 9,
+                        "title": "look",
+                        "description": "sdfs",
+                        "asigneeId": 4,
+                        "dueDate": "2023-02-15T00:00:00"
+                    }
+                ],
+                "id": 4,
+                "fullName": "Bob Johnson",
+                "email": "bob.johnson@example.com",
+                "number": "(555) 555-4321",
+                "dateOfBirth": "1985-06-30T00:00:00",
+                "monthlySalary": 7000.00,
+                "departmentId": 3
+            },
+            "id": 10,
+            "title": "play",
+            "description": "playasda",
+            "asigneeId": 4,
+            "dueDate": "2023-02-18T00:00:00"
+        },
+        {
+            "asignee": {
+                "department": {
+                    "employees": [
+                        {
+                            "tasks": [
+                                {
+                                    "id": 1,
+                                    "title": "Sell me this pen",
+                                    "description": "selling the pen",
+                                    "asigneeId": 1,
+                                    "dueDate": "2023-03-12T00:00:00"
+                                }
+                            ],
+                            "id": 1,
+                            "fullName": "Marto Belyakov",
+                            "email": "martin.belyakov@abv.bg",
+                            "number": "09799",
+                            "dateOfBirth": "1999-08-26T00:00:00",
+                            "monthlySalary": 1200.00,
+                            "departmentId": 1
+                        },
+                        {
+                            "tasks": [
+                                {
+                                    "id": 2,
+                                    "title": "doThis",
+                                    "description": "aaa",
+                                    "asigneeId": 2,
+                                    "dueDate": "2023-02-16T00:00:00"
+                                },
+                                {
+                                    "id": 3,
+                                    "title": "doThat",
+                                    "description": "aass",
+                                    "asigneeId": 2,
+                                    "dueDate": "2023-02-17T00:00:00"
+                                },
+                                {
+                                    "id": 4,
+                                    "title": "doSmth",
+                                    "description": "hhgg",
+                                    "asigneeId": 2,
+                                    "dueDate": "2023-02-20T00:00:00"
+                                },
+                                {
+                                    "id": 5,
+                                    "title": "jump",
+                                    "description": "nnaa",
+                                    "asigneeId": 2,
+                                    "dueDate": "2023-02-22T00:00:00"
+                                },
+                                {
+                                    "id": 6,
+                                    "title": "fall",
+                                    "description": "asdas",
+                                    "asigneeId": 2,
+                                    "dueDate": "2023-02-25T00:00:00"
+                                }
+                            ],
+                            "id": 2,
+                            "fullName": "John Smith",
+                            "email": "john.smith@example.com",
+                            "number": "(555) 555-1234",
+                            "dateOfBirth": "1990-01-01T00:00:00",
+                            "monthlySalary": 3000.00,
+                            "departmentId": 1
+                        }
+                    ],
+                    "id": 1,
+                    "name": "Sales"
+                },
+                "tasks": [],
+                "id": 5,
+                "fullName": "Samantha Lee",
+                "email": "samantha.lee@example.com",
+                "number": "(555) 555-8765",
+                "dateOfBirth": "1992-10-10T00:00:00",
+                "monthlySalary": 5500.00,
+                "departmentId": 1
+            },
+            "id": 11,
+            "title": "watch",
+            "description": "asdasd",
+            "asigneeId": 5,
+            "dueDate": "2023-02-19T00:00:00"
+        },
+        {
+            "asignee": {
+                "department": {
+                    "employees": [
+                        {
+                            "tasks": [
+                                {
+                                    "id": 9,
+                                    "title": "look",
+                                    "description": "sdfs",
+                                    "asigneeId": 4,
+                                    "dueDate": "2023-02-15T00:00:00"
+                                },
+                                {
+                                    "id": 10,
+                                    "title": "play",
+                                    "description": "playasda",
+                                    "asigneeId": 4,
+                                    "dueDate": "2023-02-18T00:00:00"
+                                }
+                            ],
+                            "id": 4,
+                            "fullName": "Bob Johnson",
+                            "email": "bob.johnson@example.com",
+                            "number": "(555) 555-4321",
+                            "dateOfBirth": "1985-06-30T00:00:00",
+                            "monthlySalary": 7000.00,
+                            "departmentId": 3
+                        }
+                    ],
+                    "id": 3,
+                    "name": "Engineering"
+                },
+                "tasks": [],
+                "id": 6,
+                "fullName": "David Kim",
+                "email": "david.kim@example.com",
+                "number": "(555) 555-2468",
+                "dateOfBirth": "1998-12-25T00:00:00",
+                "monthlySalary": 4555.00,
+                "departmentId": 3
+            },
+            "id": 12,
+            "title": "sleep",
+            "description": "asdas",
+            "asigneeId": 6,
+            "dueDate": "2023-02-19T00:00:00"
+        }
+    ]
+}
